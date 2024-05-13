@@ -89,3 +89,12 @@ jobs:
           cmake ..
           make
           ./src/calculator carre 2
+
+
+  Deploy:
+    runs-on: ubuntu-latest
+    needs: Compilation
+    steps:
+      - name: Déploiement
+        run: |
+          echo "Deploy"
