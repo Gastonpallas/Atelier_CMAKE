@@ -29,7 +29,7 @@ jobs:
           cmake ..
           make
           ./src/calculator add 10 5
-              steps:
+      steps:
       - name: Test fonction sub
         run: |
           last_directory=$(basename ${{ runner.workspace }})
@@ -41,6 +41,7 @@ jobs:
           make
           ./src/calculator sub 10 5
 
+      steps:
       - name: Test fonction mul
         run: |
           last_directory=$(basename ${{ runner.workspace }})
@@ -53,6 +54,7 @@ jobs:
           ./src/calculator mul 10 5
 
 
+      steps:
       - name: Test fonction div
         run: |
           last_directory=$(basename ${{ runner.workspace }})
@@ -64,7 +66,7 @@ jobs:
           make
           ./src/calculator div 10 5
 
-
+      steps:
       - name: Test fonction carre
         run: |
           last_directory=$(basename ${{ runner.workspace }})
